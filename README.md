@@ -39,8 +39,8 @@ python3 -m pip install Jupyterlab \
 # ライブラリの書き出し
 python3 -m pip freeze > requirements.txt
 
-# Jupyterlabの起動
-Jupyter-lab
+# Jupyterlabの起動(ローカルホスト以外にも見えるように)
+Jupyter-lab --ip='0.0.0.0' --NotebookApp.token=''
 ```
 
 
