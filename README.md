@@ -13,17 +13,18 @@ source ./.venv/bin/activate
 
 # Install Library
 python3 -m pip install Jupyterlab \
-  jupyterlab-language-pack-ja-JP \
-  jupyterlab-git \
+  jupyterlab-language-pack-ja-JP \ # 日本語化
+  jupyterlab-git \ # Git
   lckr_jupyterlab_variableinspector \
   jupyterlab-code-formatter \
   # (black or yapf or autopep8) \ # コード自動整形
   matplotlib \
   pandas numpy \
-  jupyter-ai[all] \
-  jupyter_contrib_nbextensions \
+  # jupyter-ai[all] \
+  jupyter-ai langchain-openai
+  # jupyter_contrib_nbextensions \
   'jupyterlab>=4.0.0,<5.0.0a0' jupyterlab-lsp \
-  jedi-language-server \
+  # jedi-language-server \
   'python-lsp-server[all]' \
   polars \
   vaex \
