@@ -1,1 +1,4 @@
+# Python venv
 .venv
+.ipynb_checkpoints
+
