@@ -1,4 +1,5 @@
 # Python venv
 .venv
 .ipynb_checkpoints
-
+.env
+.virtual_documents
