@@ -22,29 +22,57 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser RemoteSigne
 .\.venv\Scripts\activate
 
 # Install Library
-python -m pip install Jupyterlab \
-  jupyterlab-language-pack-ja-JP \ # 日本語化
-  jupyterlab-git \ # Git
+python -m pip \
+  
+  # Jupyterlab
+  install Jupyterlab \
+  
+  # Jupyterlabの日本語化
+  jupyterlab-language-pack-ja-JP \
+  
+  # 拡張機能を追加する拡張機能
+  # jupyter_contrib_nbextensions \
+  
+  # JupyterlabのGit拡張機能
+  jupyterlab-git \
+  
+  # 変数の確認するための拡張機能
   lckr_jupyterlab_variableinspector \
+  
+  # Pythonコードのフォーマッター
   jupyterlab-code-formatter \
-  # (black or yapf or autopep8) \ # コード自動整形
-  matplotlib \
-  pandas numpy \
+  
+  # コード補完機能
+  'jupyterlab>=4.0.0,<5.0.0a0' jupyterlab-lsp \
+
+  # コード自動整形
+  # jedi-language-server \
+  # 'python-lsp-server[all]' \
+  'python-lsp-server[autopep8]' \
+  # autopep8 \
+  
+  # ChatGPTの拡張機能
   # jupyter-ai[all] \
   jupyter-ai langchain-openai
-  # jupyter_contrib_nbextensions \
-  'jupyterlab>=4.0.0,<5.0.0a0' jupyterlab-lsp \
-  # jedi-language-server \
-  'python-lsp-server[all]' \
+  
+  # Data Science
+  matplotlib \
+  pandas \
+  numpy \
   polars \
-  vaex \
   plotly \
-  altair vega_datasets \
+  seaborn \
+  scikit-learn \
+  tensorflow[and cuda] \
   pycaret \
   shap \
-  seaborn \
-  tensorflow[and cuda] \
-  scikit-learn
+  
+  # vaex: BigData向けのpandasの似たライブラリ
+  vaex \
+  # altair: データ可視化ライブラリ
+  altair \
+  # vega_dataset: altairとセットで使われるデータセットがあるライブラリ(irisなど)
+  vega_datasets
 
 # ライブラリの書き出し
 python -m pip freeze > requirements.txt
@@ -63,29 +91,57 @@ python3 -m venv .venv
 source ./.venv/bin/activate
 
 # Install Library
-python3 -m pip install Jupyterlab \
-  jupyterlab-language-pack-ja-JP \ # 日本語化
-  jupyterlab-git \ # Git
+python -m pip \
+  
+  # Jupyterlab
+  install Jupyterlab \
+  
+  # Jupyterlabの日本語化
+  jupyterlab-language-pack-ja-JP \
+  
+  # 拡張機能を追加する拡張機能
+  # jupyter_contrib_nbextensions \
+  
+  # JupyterlabのGit拡張機能
+  jupyterlab-git \
+  
+  # 変数の確認するための拡張機能
   lckr_jupyterlab_variableinspector \
+  
+  # Pythonコードのフォーマッター
   jupyterlab-code-formatter \
-  # (black or yapf or autopep8) \ # コード自動整形
-  matplotlib \
-  pandas numpy \
+  
+  # コード補完機能
+  'jupyterlab>=4.0.0,<5.0.0a0' jupyterlab-lsp \
+
+  # コード自動整形
+  # jedi-language-server \
+  # 'python-lsp-server[all]' \
+  'python-lsp-server[autopep8]' \
+  # autopep8 \
+  
+  # ChatGPTの拡張機能
   # jupyter-ai[all] \
   jupyter-ai langchain-openai
-  # jupyter_contrib_nbextensions \
-  'jupyterlab>=4.0.0,<5.0.0a0' jupyterlab-lsp \
-  # jedi-language-server \
-  'python-lsp-server[all]' \
+  
+  # Data Science
+  matplotlib \
+  pandas \
+  numpy \
   polars \
-  vaex \
   plotly \
-  altair vega_datasets \
+  seaborn \
+  scikit-learn \
+  tensorflow[and cuda] \
   pycaret \
   shap \
-  seaborn \
-  tensorflow[and cuda] \
-  scikit-learn
+  
+  # vaex: BigData向けのpandasの似たライブラリ
+  vaex \
+  # altair: データ可視化ライブラリ
+  altair \
+  # vega_dataset: altairとセットで使われるデータセットがあるライブラリ(irisなど)
+  vega_datasets
 
 # ライブラリの書き出し
 python3 -m pip freeze > requirements.txt
