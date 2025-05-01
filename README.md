@@ -22,10 +22,10 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser RemoteSigne
 .\.venv\Scripts\activate
 
 # Install Library
-python -m pip \
+python -m pip install \
   
   # Jupyterlab
-  install Jupyterlab \
+  Jupyterlab \
   
   # Jupyterlabの日本語化
   jupyterlab-language-pack-ja-JP \
@@ -53,7 +53,7 @@ python -m pip \
   
   # ChatGPTの拡張機能
   # jupyter-ai[all] \
-  jupyter-ai langchain-openai
+  jupyter-ai langchain-openai \
   
   # Data Science
   matplotlib \
@@ -91,7 +91,7 @@ python3 -m venv .venv
 source ./.venv/bin/activate
 
 # Install Library
-python -m pip \
+python3 -m pip install \
   
   # Jupyterlab
   install Jupyterlab \
@@ -122,7 +122,7 @@ python -m pip \
   
   # ChatGPTの拡張機能
   # jupyter-ai[all] \
-  jupyter-ai langchain-openai
+  jupyter-ai langchain-openai \
   
   # Data Science
   matplotlib \
