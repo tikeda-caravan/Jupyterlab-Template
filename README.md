@@ -56,7 +56,9 @@ python3 -m pip install \
   
   # Data Science
   matplotlib \
+  japanize-matplotlib \
   pandas \
+  openpyxl \
   numpy \
   polars \
   plotly \
@@ -115,7 +117,9 @@ python -m pip install `
 ## Data Science周り
 python -m pip install `
   matplotlib `
+  japanize-matplotlib`
   pandas `
+  openpyxl `
   numpy `
   polars `
   plotly `
