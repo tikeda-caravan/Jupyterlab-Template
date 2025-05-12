@@ -1,15 +1,4 @@
 {
-  "jupyterlab-jupytext:plugin": {
-    "auto:percent": true,
-    "auto:light": false,
-    "auto:hydrogen": false,
-    "auto:nomarker": false,
-    "md:myst": true,
-    "md": false,
-    "Rmd": false,
-    "qmd": false,
-    "NOTE": null
-  },
   "@jupyterlab/translation-extension:plugin": {
     "locale": "ja_JP"
   },
@@ -20,7 +9,9 @@
     "visible": true
   },
   "@jupyterlab/notebook-extension:tracker": {
-    "enableKernelInitNotification": true,
+    "accessKernelHistory": false,
+    "autoRenderMarkdownCells": false,
+    "autoStartDefaultKernel": true,
     "codeCellConfig": {
       "autoClosingBrackets": true,
       "codeFolding": true,
@@ -32,47 +23,51 @@
       ]
     },
     "defaultCell": "code",
-    "autoStartDefaultKernel": false,
-    "showInputPlaceholder": true,
+    "documentWideUndoRedo": false,
+    "enableKernelInitNotification": true,
     "inputHistoryScope": "global",
     "kernelShutdown": true,
-    "markdownCellConfig": {
-      "autoClosingBrackets": true,
-      "highlightActiveLine": true,
-      "highlightTrailingWhitespace": true,
-      "highlightWhitespace": true
-    },
-    "autoRenderMarkdownCells": false,
-    "rawCellConfig": {
-      "autoClosingBrackets": true,
-      "highlightActiveLine": true,
-      "highlightTrailingWhitespace": true,
-      "highlightWhitespace": true
-    },
-    "scrollPastEnd": true,
-    "recordTiming": false,
-    "overscanCount": 1,
-    "maxNumberOutputs": 50,
-    "scrollHeadingToTop": true,
-    "showEditorForReadOnlyMarkdown": true,
     "kernelStatus": {
       "showOnStatusBar": true,
       "showProgress": true
     },
-    "documentWideUndoRedo": false,
-    "showHiddenCellsButton": true,
+    "markdownCellConfig": {
+      "autoClosingBrackets": true,
+      "highlightActiveLine": true,
+      "highlightTrailingWhitespace": true,
+      "highlightWhitespace": true,
+      "rulers": [
+        80
+      ]
+    },
+    "maxNumberOutputs": 50,
+    "overscanCount": 1,
+    "rawCellConfig": {
+      "autoClosingBrackets": true,
+      "highlightActiveLine": true,
+      "highlightTrailingWhitespace": true,
+      "highlightWhitespace": true,
+      "rulers": [
+        80
+      ]
+    },
+    "recordTiming": false,
     "renderingLayout": "default",
+    "scrollHeadingToTop": true,
+    "scrollPastEnd": true,
+    "showEditorForReadOnlyMarkdown": true,
+    "showHiddenCellsButton": true,
+    "showInputPlaceholder": true,
     "sideBySideLeftMarginOverride": "10px",
-    "sideBySideRightMarginOverride": "10px",
     "sideBySideOutputRatio": 1,
-    "windowingMode": "full",
-    "accessKernelHistory": false
+    "sideBySideRightMarginOverride": "10px",
+    "windowingMode": "full"
   },
   "@jupyterlab/filebrowser-extension:browser": {
-    "showFileCheckboxes": true,
+    "showFileCheckboxes": false,
     "showFileSizeColumn": true,
     "showFullPath": true,
-    "showHiddenFiles": true,
+    "showHiddenFiles": false,
     "sortNotebooksFirst": true
   },
   "@jupyterlab/apputils-extension:themes": {
@@ -107,11 +102,17 @@
         },
         "jp-git-sessions": {
           "area": "right"
+        },
+        "File Browser": {
+          "area": "left"
         }
       },
       "multiple": {
         "jp-git-sessions": {
           "area": "right"
+        },
+        "File Browser": {
+          "area": "left"
         }
       }
     }
@@ -274,7 +275,10 @@
       "codeFolding": true,
       "highlightActiveLine": true,
       "highlightTrailingWhitespace": true,
-      "highlightWhitespace": true
+      "highlightWhitespace": true,
+      "rulers": [
+        80
+      ]
     }
   },
   "jupyterlab_code_formatter:settings": {
@@ -323,5 +327,16 @@
     },
     "suppressFormatterErrors": false,
     "suppressFormatterErrorsIFFAutoFormatOnSave": false
+  },
+  "@jupyterlab/completer-extension:manager": {
+    "availableProviders": {
+      "lsp": 1000,
+      "CompletionProvider:context": 500,
+      "CompletionProvider:kernel": 550
+    },
+    "providerTimeout": 1000,
+    "showDocumentationPanel": true,
+    "autoCompletion": true,
+    "suppressIfInlineCompleterActive": true
   }
 }
