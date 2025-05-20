@@ -13,6 +13,14 @@
   "@jupyterlab/translation-extension:plugin": {
     "locale": "ja_JP"
   },
+  "@jupyterlab/toc-extension:registry": {
+    "maximalDepth": 4,
+    "numberingH1": true,
+    "numberHeaders": true,
+    "includeOutput": true,
+    "syncCollapseState": false,
+    "baseNumbering": 1
+  },
   "@jupyterlab/terminal-extension:plugin": {
     "theme": "dark"
   },
