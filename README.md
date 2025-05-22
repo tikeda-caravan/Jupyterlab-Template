@@ -22,26 +22,11 @@ source ./.venv/bin/activate
 
 # Install Library
 python3 -m pip install \
-  
-  # Jupyterlab
   install Jupyterlab \
-  
-  # Jupyterlabの日本語化
   jupyterlab-language-pack-ja-JP \
-  
-  # 拡張機能を追加する拡張機能
-  # jupyter_contrib_nbextensions \
-  
-  # JupyterlabのGit拡張機能
   jupyterlab-git \
-  
-  # 変数の確認するための拡張機能
   lckr_jupyterlab_variableinspector \
-  
-  # Pythonコードのフォーマッター
   jupyterlab-code-formatter \
-  
-  # コード補完機能
   'jupyterlab>=4.0.0,<5.0.0a0' jupyterlab-lsp \
 
   # コード自動整形
@@ -52,9 +37,10 @@ python3 -m pip install \
   
   # ChatGPTの拡張機能
   # jupyter-ai[all] \
-  jupyter-ai langchain-openai \
-  
-  # Data Science
+  jupyter-ai langchain-openai
+
+# Data Science
+python3 -m pip install \
   matplotlib \
   japanize-matplotlib \
   pandas \
@@ -67,12 +53,8 @@ python3 -m pip install \
   tensorflow[and cuda] \
   pycaret \
   shap \
-  
-  # vaex: BigData向けのpandasの似たライブラリ
   vaex \
-  # altair: データ可視化ライブラリ
   altair \
-  # vega_dataset: altairとセットで使われるデータセットがあるライブラリ(irisなど)
   vega_datasets
 
 # ライブラリの書き出し
@@ -94,7 +76,8 @@ python -m venv .venv
 Get-ExecutionPolicy -Scope CurrentUser
 
 # 実行ポリシーを RemoteSigned に変更する
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser RemoteSigned
+# Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser RemoteSigned
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
 # 仮想環境の起動
 .\.venv\Scripts\activate
@@ -117,7 +100,7 @@ python -m pip install `
 ## Data Science周り
 python -m pip install `
   matplotlib `
-  japanize-matplotlib`
+  japanize-matplotlib `
   pandas `
   openpyxl `
   numpy `
