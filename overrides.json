@@ -14,10 +14,10 @@
     "locale": "ja_JP"
   },
   "@jupyterlab/toc-extension:registry": {
-    "maximalDepth": 4,
-    "numberingH1": true,
+    "maximalDepth": 3,
+    "numberingH1": false,
     "numberHeaders": true,
-    "includeOutput": true,
+    "includeOutput": false,
     "syncCollapseState": false,
     "baseNumbering": 1
   },
@@ -86,9 +86,10 @@
   },
   "@jupyterlab/filebrowser-extension:browser": {
     "showFileCheckboxes": false,
-    "showFileSizeColumn": true,
+    "showFileSizeColumn": false,
     "showFullPath": true,
     "showHiddenFiles": false,
+    "showLastModifiedColumn": false,
     "sortNotebooksFirst": true
   },
   "@jupyterlab/extensionmanager-extension:plugin": {
@@ -151,7 +152,7 @@
           "area": "right"
         },
         "File Browser": {
-          "area": "left"
+          "area": "right"
         }
       },
       "multiple": {
@@ -159,7 +160,7 @@
           "area": "right"
         },
         "File Browser": {
-          "area": "left"
+          "area": "right"
         }
       }
     }
@@ -263,7 +264,12 @@
       "lineWrap": false,
       "rulers": [
         80
-      ]
+      ],
+      "customStyles": {
+        "fontFamily": null,
+        "fontSize": 15,
+        "lineHeight": null
+      }
     },
     "scrollPastEnd": true,
     "toolbar": []
