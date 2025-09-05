@@ -27,7 +27,7 @@ dependencies:
   - bzip2=1.0.8=h2bbff1b_6
   - ca-certificates=2025.8.3=h4c7d964_0
   - cairo=1.18.4=he9e932c_0
-  - certifi=2025.8.3=pyhd8ed1ab_0
+  - certifi=2025.8.3=py313haa95532_0
   - cffi=1.17.1=py313h827c3e9_1
   - charset-normalizer=3.3.2=pyhd3eb1b0_0
   - cloudpickle=3.1.1=py313haa95532_0
@@ -88,6 +88,7 @@ dependencies:
   - jupyterlab_code_formatter=3.0.2=py313haa95532_0
   - jupyterlab_pygments=0.3.0=py313haa95532_0
   - jupyterlab_server=2.27.3=py313haa95532_0
+  - jupytext=1.16.7=py313haa95532_0
   - kiwisolver=1.4.8=py313h5da7b33_0
   - lckr_jupyterlab_variableinspector=3.2.4=pyhd8ed1ab_1
   - lcms2=2.16=h62be587_1
@@ -107,11 +108,14 @@ dependencies:
   - libxml2=2.13.8=h866ff63_0
   - llvmlite=0.44.0=py313h8b1c7eb_1
   - lz4-c=1.9.4=h2bbff1b_1
+  - markdown-it-py=4.0.0=py313haa95532_0
   - markupsafe=3.0.2=py313h827c3e9_0
   - matplotlib=3.10.5=py313haa95532_0
   - matplotlib-base=3.10.5=py313h26e45b9_0
   - matplotlib-inline=0.1.6=py313haa95532_0
   - mccabe=0.7.0=pyhd3eb1b0_0
+  - mdit-py-plugins=0.5.0=py313haa95532_0
+  - mdurl=0.1.0=py313haa95532_0
   - mistune=3.1.2=py313haa95532_0
   - mkl=2025.0.0=h5da7b33_930
   - mkl-service=2.4.0=py313h827c3e9_3
