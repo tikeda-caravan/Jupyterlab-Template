@@ -1,4 +1,4 @@
-name: profit_simulator
+name: Jupyterlab-Template
 channels:
   - conda-forge
   - defaults
@@ -243,4 +243,4 @@ dependencies:
   - zipp=3.21.0=py313haa95532_0
   - zlib=1.2.13=h8cc25b3_1
   - zstd=1.5.6=h8880b57_0
-prefix: C:\Users\t.ikeda\AppData\Local\anaconda3\envs\profit_simulator
+prefix: C:\Users\t.ikeda\AppData\Local\anaconda3\envs\Jupyterlab-Template
